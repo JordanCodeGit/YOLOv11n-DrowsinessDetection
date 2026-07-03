@@ -162,6 +162,13 @@ Built from **NITYMed** driver videos (the Roboflow source was skipped in this ru
 
 Annotation coverage: **90.7%** (microsleep) / **90.8%** (yawning).
 
+### Evaluation notes
+
+- **Read sensitivity, not just mAP.** Because every training image carries a single, roughly centered eye-region box, *localization* is easy and mAP@50 runs high (0.953 on test). The metric that actually reflects fatigue-detection quality is the **`eye_closed` sensitivity / recall (0.936)** — i.e. how reliably a genuinely closed-eye frame is caught. That is the number to weigh for a safety system, and the 17 test-set false negatives are where future work should focus.
+- **Val vs. test.** Validation mAP@50 (~0.99) exceeds test mAP@50 (0.953), a small and healthy gap that indicates the model generalizes rather than memorizes.
+- **Distribution caveat.** The val/test splits inherit the source imbalance (~83% `eye_open` / 17% `eye_closed`), so accuracy alone is optimistic; sensitivity, specificity, and AUC-ROC are reported together to give the full picture.
+- **NITYMed-only run.** These results use NITYMed data only (Roboflow was skipped), so they reflect in-cabin driving footage rather than a cross-dataset generalization test.
+
 ---
 
 ## Real-Time Drowsiness Engine
@@ -270,4 +277,6 @@ CONFIG['roboflow_api_key'] = os.environ['ROBOFLOW_API_KEY']
 ## Authors
 
 Viskom (Computer Vision) — **Kelompok 4**, Telkom University.
-Maintainer: [@JordanCodeGit](https://github.com/JordanCodeGit) (Jordan Angkawijaya).
+
+- **Jordan Angkawijaya** — [LinkedIn](https://www.linkedin.com/in/jordan-angkawijaya/) · [GitHub](https://github.com/JordanCodeGit) · [Portfolio](https://jordanaw.vercel.app/)
+- **Axandio Biyanatul Lizan** — [LinkedIn](https://www.linkedin.com/in/axandio-biyanatul-lizan-b79a29260/) · [GitHub](https://github.com/xancodess)
