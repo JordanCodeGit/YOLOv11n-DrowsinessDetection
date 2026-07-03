@@ -2,7 +2,7 @@
 
 **Real-Time Driver Fatigue Monitoring in Diverse Lighting: An Optimized YOLOv11n Architecture**
 
-[![Open In Colab](https://colab.research.google.com/colab-badge.svg)](https://colab.research.google.com/github/JordanCodeGit/YOLOv11n-DrowsinessDetection/blob/main/Drowsiness_Detection_Viskom_Kelompok_4_v2_copy.ipynb)
+[![Open In Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/JordanCodeGit/YOLOv11n-DrowsinessDetection/blob/main/Drowsiness_Detection_Viskom_Kelompok_4_v2_copy.ipynb)
 ![Model](https://img.shields.io/badge/model-YOLOv11n-orange)
 ![Task](https://img.shields.io/badge/task-object%20detection-blue)
 ![License](https://img.shields.io/badge/license-academic-lightgrey)
